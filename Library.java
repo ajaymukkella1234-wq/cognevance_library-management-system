@@ -1,10 +1,16 @@
-// Student.java
-class Student {
-    int id;
-    String name;
+// Library.java
+import java.util.ArrayList;
 
-    Student(int id, String name) {
-        this.id = id;
-        this.name = name;
+class Library {
+    ArrayList<Book> books = new ArrayList<>();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void showBooks() {
+        for (Book book : books) {
+            book.display();
+        }
     }
 }
